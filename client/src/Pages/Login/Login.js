@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 import { toast } from 'react-toastify';
-import Cookies from 'js-cookie';
 import API from '../../utils/utils';
 import Cookie from 'universal-cookie';
 import { AuthContext } from '../../Context_API/AuthContext';
