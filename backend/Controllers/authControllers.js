@@ -2,7 +2,7 @@ const User = require('../Models/userModels');
 const { validRegister, validLogin } = require('../Middleware/validUser');
 const bcrypt = require('bcrypt');
 const Jwt = require('jsonwebtoken');
-
+const { serialize } = require('cookie');
 module.exports = {
     signUP: async (req, res) => {
         const { firstName, lastName, username, email, password } = req.body;
@@ -102,7 +102,16 @@ module.exports = {
                 const token = accessToken({ id: user._id, role: user.role });
                 const { firstName, lastName, email, role } = user;
                 const displayName = firstName + ' ' + lastName;
-
+                res.setHeader(
+                    'Set-Cookie',
+                    serialize('one', token, {
+                        httpOnly: true,
+                        secure: true,
+                        sameSite: 'none',
+                        path: '/',
+                        maxAge: 1 * 24 * 60 * 60, // 1 day
+                    })
+                );
                 res.status(200)
                     .header('authorization', token)
                     .json({
