@@ -44,19 +44,19 @@ function Login() {
                     role: resp.data.message.role,
                 });
 
-                MainCookies.set('UserInfo', message, {
-                    httpOnly: false,
-                    secure: true,
-                    sameSite: 'strict',
-                    maxAge: 1 * 24 * 60 * 60, // 1 day
-                    path: '/',
-                });
-
                 MainCookies.set('auth', resp.headers.authorization, {
-                    httpOnly: false,
+                    httpOnly: true,
                     secure: true,
                     sameSite: 'none',
                     maxAge: 1 * 24 * 60 * 60, //1 day
+                    path: '/',
+                });
+
+                MainCookies.set('UserInfo', message, {
+                    httpOnly: false,
+                    secure: false,
+                    sameSite: 'strict',
+                    maxAge: 1 * 24 * 60 * 60, // 1 day
                     path: '/',
                 });
 

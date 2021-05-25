@@ -32,7 +32,12 @@ export function Head() {
                 role: role,
             });
         }
-    }, [Auth, setAuth]);
+
+        return () => {
+            return null;
+        };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     const handleSignout = async e => {
         await API.post('/api/signout')
