@@ -32,7 +32,7 @@ export function Head() {
                 role: role,
             });
         }
-    }, []);
+    }, [Auth, setAuth]);
 
     const handleSignout = async e => {
         await API.post('/api/signout')
