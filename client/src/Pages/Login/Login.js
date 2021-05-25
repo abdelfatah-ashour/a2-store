@@ -53,7 +53,7 @@ function Login() {
                 });
 
                 MainCookies.set('auth', resp.headers.authorization, {
-                    httpOnly: true,
+                    httpOnly: false,
                     secure: true,
                     sameSite: 'none',
                     maxAge: 1 * 24 * 60 * 60, //1 day
