@@ -47,15 +47,15 @@ function Login() {
 
                 MainCookies.set('UserInfo', message, {
                     httpOnly: false,
-                    secure: false,
+                    secure: true,
                     sameSite: 'strict',
                     maxAge: 7 * 24 * 60 * 60,
                     path: '/',
                 });
 
                 MainCookies.set('auth', resp.headers.authorization, {
-                    httpOnly: false,
-                    secure: false,
+                    httpOnly: true,
+                    secure: true,
                     sameSite: 'strict',
                     maxAge: 7 * 24 * 60 * 60,
                     path: '/',
