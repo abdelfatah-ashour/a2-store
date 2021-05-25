@@ -44,22 +44,25 @@ function Login() {
                     role: resp.data.message.role,
                 });
 
-                MainCookies.set('auth', resp.headers.authorization, {
-                    httpOnly: true,
-                    secure: true,
-                    sameSite: 'none',
-                    maxAge: 1 * 24 * 60 * 60, //1 day
-                    path: '/',
-                });
+                try {
+                    MainCookies.set('auth', resp.headers.authorization, {
+                        httpOnly: true,
+                        secure: true,
+                        sameSite: 'none',
+                        maxAge: 1 * 24 * 60 * 60, //1 day
+                        path: '/',
+                    });
 
-                MainCookies.set('UserInfo', message, {
-                    httpOnly: false,
-                    secure: false,
-                    sameSite: 'strict',
-                    maxAge: 1 * 24 * 60 * 60, // 1 day
-                    path: '/',
-                });
-
+                    MainCookies.set('UserInfo', message, {
+                        httpOnly: false,
+                        secure: false,
+                        sameSite: 'strict',
+                        maxAge: 1 * 24 * 60 * 60, // 1 day
+                        path: '/',
+                    });
+                } catch (error) {
+                    console.log(error.message);
+                }
                 toast.success('Login success');
 
                 setTimeout(() => {
