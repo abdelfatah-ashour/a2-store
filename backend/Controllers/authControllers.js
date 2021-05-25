@@ -126,7 +126,10 @@ module.exports = {
             if (!token) {
                 return res.status(401).json({
                     success: false,
-                    message: 'please register or login 1',
+                    message: {
+                        msg: 'please register or login 1',
+                        req: req.cookies,
+                    },
                 });
             }
             await Jwt.verify(
@@ -136,7 +139,10 @@ module.exports = {
                     if (error || !decoded) {
                         return res.status(401).json({
                             success: false,
-                            message: 'please register or login 2',
+                            message: {
+                                msg: 'please register or login 1',
+                                req: req.cookies,
+                            },
                         });
                     }
                     req.user = decoded;
