@@ -8,7 +8,6 @@ export function AuthContextProvider({ children }) {
         displayName: null,
         email: null,
         role: null,
-        token: null,
     });
     return (
         <AuthContext.Provider value={{ Auth, setAuth }}>

@@ -104,7 +104,7 @@ module.exports = {
                 const displayName = firstName + ' ' + lastName;
                 res.setHeader(
                     'Set-Cookie',
-                    serialize('one', token, {
+                    serialize('auth', token, {
                         httpOnly: true,
                         secure: true,
                         sameSite: 'none',
@@ -135,11 +135,7 @@ module.exports = {
             if (!token) {
                 return res.status(401).json({
                     success: false,
-                    message: {
-                        msg: 'please register or login 1',
-                        req: req.cookies,
-                        headers: req.headers,
-                    },
+                    message: 'please register or login 1',
                 });
             }
             await Jwt.verify(

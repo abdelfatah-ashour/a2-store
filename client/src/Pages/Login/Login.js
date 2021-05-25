@@ -36,7 +36,6 @@ function Login() {
 
                 setAuth({
                     ...Auth,
-                    token: resp.headers.authorization,
                     state: true,
                     id: resp.data.message.id,
                     displayName: resp.data.message.displayName,
@@ -45,14 +44,6 @@ function Login() {
                 });
 
                 try {
-                    MainCookies.set('auth', resp.headers.authorization, {
-                        httpOnly: true,
-                        secure: true,
-                        sameSite: 'none',
-                        maxAge: 1 * 24 * 60 * 60, //1 day
-                        path: '/',
-                    });
-
                     MainCookies.set('UserInfo', message, {
                         httpOnly: false,
                         secure: true,
