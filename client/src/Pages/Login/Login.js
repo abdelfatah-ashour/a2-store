@@ -55,7 +55,7 @@ function Login() {
 
                     MainCookies.set('UserInfo', message, {
                         httpOnly: false,
-                        secure: false,
+                        secure: true,
                         sameSite: 'strict',
                         maxAge: 1 * 24 * 60 * 60, // 1 day
                         path: '/',
