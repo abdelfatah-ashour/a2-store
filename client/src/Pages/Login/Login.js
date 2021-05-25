@@ -48,15 +48,15 @@ function Login() {
                     httpOnly: false,
                     secure: true,
                     sameSite: 'strict',
-                    maxAge: 7 * 24 * 60 * 60,
+                    maxAge: 1 * 24 * 60 * 60, // 1 day
                     path: '/',
                 });
 
                 MainCookies.set('auth', resp.headers.authorization, {
                     httpOnly: true,
                     secure: true,
-                    sameSite: 'strict',
-                    maxAge: 7 * 24 * 60 * 60,
+                    sameSite: 'none',
+                    maxAge: 1 * 24 * 60 * 60, //1 day
                     path: '/',
                 });
 
