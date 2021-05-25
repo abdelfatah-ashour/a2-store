@@ -22,7 +22,7 @@ app.use(
         credentials: true,
         path: '/',
         methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        exposedHeaders: ['authorization'],
+        exposedHeaders: ['authorization', 'cookie', 'Set-Cookie'],
     })
 );
 
