@@ -1,0 +1,26 @@
+:root {
+	--bg-mainColor: #f4f4f4;
+	--mainColor: #1a1c20;
+	--secColor: #1a1c20;
+	--thirdColor: #212121;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+#root {
+	background-color: var(--bg-mainColor);
+	color: var(--mainColor);
+}
+html {
+	background-color: var(--bg-mainColor);
+}
+body {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5rem;
+}

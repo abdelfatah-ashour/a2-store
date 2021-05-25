@@ -1,0 +1,38 @@
+.login {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--bg-mainColor);
+}
+.login .banner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login .banner img {
+  width: 100%;
+  height: 100%;
+}
+.login .collectionForm form {
+  margin-top: 5rem;
+}
+.login .collectionForm form .registerRoot {
+  text-decoration: none;
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+.login .collectionForm form .btnSubmit {
+  padding: 1px 10px !important;
+  margin: 5px 0 5px 5px;
+}
+
+.homeRoot {
+  margin: 30px;
+}
+.homeRoot a {
+  color: var(--mainColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+}

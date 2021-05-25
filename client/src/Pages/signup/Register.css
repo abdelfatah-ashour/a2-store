@@ -1,0 +1,42 @@
+@media (max-width: 400) {
+  * {
+    font-size: 14px;
+  }
+}
+
+.register {
+  padding-top: 5rem;
+  height: 100vh;
+}
+.register .banner {
+  width: 85%;
+  height: 85%;
+}
+
+.register .banner img {
+  width: 100%;
+  height: 100%;
+}
+.register .collectionForm form {
+  margin-top: 5rem;
+}
+
+.register .collectionForm span {
+  font-size: 1rem;
+  margin: 10px 0px;
+}
+.login .collectionForm .collectionForm .form .btnSubmit {
+  padding: 1px 10px !important;
+  margin: 5px 0 10px 5px;
+  align-items: center;
+}
+
+.homeRoot {
+  margin: 30px;
+}
+.homeRoot a {
+  color: var(--mainColor);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+}

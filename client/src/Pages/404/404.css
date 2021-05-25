@@ -1,0 +1,8 @@
+.error404 {
+  position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 15rem;
+}

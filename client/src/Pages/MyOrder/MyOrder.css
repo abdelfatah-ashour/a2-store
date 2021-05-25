@@ -1,0 +1,27 @@
+.order {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  border: 2px solid #888;
+  border-radius: 5px;
+  margin: 10px auto;
+  padding: 20px 10px;
+  background-color: #ccc751;
+  line-height: 1.7rem;
+}
+.order .items {
+  padding-top: 20px;
+}
+.order .items ul {
+  padding-left: 15px;
+  list-style: none;
+  border-left: 2px solid #888;
+  width: 90%;
+}
+.order .state {
+  padding-top: 20px;
+}
+.order .state div {
+  border-left: 2px dashed #888;
+  padding-left: 20px;
+}

@@ -1,0 +1,36 @@
+.head {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1rem;
+}
+.listSocial,
+.listSetting {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.listSocial li,
+.listSetting li {
+  margin-right: 0.5rem;
+}
+.listSocial li a,
+.listSetting li a {
+  color: var(--thirdColor);
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.listSetting {
+  margin-left: auto;
+}
+
+.linkIconCart {
+  position: relative;
+}
+.linkIconCart a span {
+  position: absolute;
+  top: -20px;
+  right: 2px;
+  color: rgb(235, 18, 18);
+}

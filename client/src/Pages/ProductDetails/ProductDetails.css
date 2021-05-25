@@ -1,0 +1,31 @@
+.details {
+  width: 100%;
+  height: 100%;
+  padding: 6rem;
+}
+.content_image {
+  width: 70%;
+  height: 70%;
+}
+.content_image img {
+  width: 100%;
+  height: auto;
+}
+.content_info {
+  padding: 10% 0;
+  line-height: 1.7rem;
+}
+.content_info span {
+  display: block;
+}
+
+.details button a {
+  text-decoration: none;
+  color: var(--mainColor);
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+.details button a:hover {
+  color: var(--secColor);
+  transition: all 0.3s;
+}

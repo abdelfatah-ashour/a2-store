@@ -1,0 +1,10 @@
+.navbar {
+  color: var(--thirdColor);
+  margin: 0;
+}
+.navbar .brand {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Lobster", cursive !important;
+}

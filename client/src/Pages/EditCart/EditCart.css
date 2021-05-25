@@ -1,0 +1,34 @@
+.editCart {
+  padding-top: 3rem;
+}
+.contentImg {
+  width: 100%;
+  height: 300px;
+}
+.contentImg img {
+  width: 100%;
+  height: 100%;
+}
+.editContent {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.quantity {
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.editRootCart a {
+  text-decoration: none;
+  color: var(--mainColor);
+  text-transform: capitalize;
+}
+.editRootCart a:hover {
+  color: var(--secColor);
+  transition: all 0.3s;
+}
