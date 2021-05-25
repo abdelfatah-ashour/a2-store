@@ -121,7 +121,6 @@ module.exports = {
     },
     isAuth: async (req, res, next) => {
         const token = req.cookies.auth;
-        console.log(req);
         // check if user if authenticated with header token
         try {
             if (!token) {
@@ -130,6 +129,7 @@ module.exports = {
                     message: {
                         msg: 'please register or login 1',
                         req: req.cookies,
+                        headers: req.headers,
                     },
                 });
             }
